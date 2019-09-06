@@ -1,0 +1,8 @@
+transactionheadsutility\controller\UtilityController.class
+transactionheadsutility\service\UtilityService.class
+transactionheadsutility\service\UtilityServiceImpl.class
+transactionheadsutility\modal\SHGPaymentHeadBO.class
+transactionheadsutility\modal\SHGHeaderMapParameterBO.class
+transactionheadsutility\UtilityApplication.class
+transactionheadsutility\modal\SHGHeaderParameterBO.class
+transactionheadsutility\modal\SHGPaymentHeads.class
