@@ -78,8 +78,9 @@ public class UtilityController {
                         break;
                     case "create_node":
                         node = findNode(node, id);
-                        int numId = Integer.parseInt(id) + 1;
-                        Node childNode = new Node(String.valueOf(numId), text);
+                        String uniqId = String.valueOf(System.currentTimeMillis());
+                        Node childNode = new Node(uniqId, text);
+                        childNode.setParentId(id);
                         if (CollectionUtils.isNotEmpty(node.getChildren())) {
                             node.getChildren().add(childNode);
                         } else {
@@ -94,20 +95,15 @@ public class UtilityController {
                         break;
                 }
             }
-
-
-
-
-
             if (null == node) {
                 node = new Node("1", "root");
-                Node ch = new Node("2", "Loan 2");
+                /*Node ch = new Node("2", "Loan 2");
                 ch.setParentId(node.getId());
                 node.setChildren(Collections.singletonList(ch));
 
                 Node ch1 = new Node("3", "Loan 3");
                 ch1.setParentId(ch.getId());
-                ch.setChildren(Collections.singletonList(ch1));
+                ch.setChildren(Collections.singletonList(ch1));*/
                 session.setAttribute("KEY_", node);
             }
         }
